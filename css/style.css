@@ -16,6 +16,7 @@
   list-style: none;
   text-decoration: none;
   outline: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -26,11 +27,6 @@ body {
   color: var(--red1);
   background-color: var(--black);
   overflow-x: hidden;
-}
-
-.headerLogo > a > img {
-  width: 3rem;
-  margin: 2rem 6rem;
 }
 
 .navegation {
@@ -44,14 +40,17 @@ body {
     rgba(0, 0, 0, 0.5) 50%,
     rgba(0, 0, 0, 0) 100%
   );
+  justify-content: center;
 }
 
 .navMenu li {
   display: inline-block;
-  padding: 0.5rem 1.5rem;
+  padding: 0.7rem;
+  margin: 0.5rem 0;
   font-size: 1.2rem;
-  margin-right: 3rem;
+  color: var(--red1);
   font-weight: 500;
+  margin-right: 3rem;
   border-bottom: 0.1rem solid var(--red3);
   border-radius: 1rem;
   background: linear-gradient(
@@ -65,13 +64,27 @@ body {
   cursor: pointer;
   color: var(--white);
   border: 0;
-  transform: scale(1.1);
   background: none;
   transition: all 0.5s ease-in;
 }
 
 .mobileToggle {
   display: none;
+}
+
+.locales {
+  display: flex;
+  position: absolute;
+  top: 1.5rem;
+  right: 1rem;
+}
+
+.locales img {
+  width: 1.5rem;
+  height: 1rem;
+  margin: 0 0.5rem;
+  border-radius: 1rem;
+  cursor: pointer;
 }
 
 .background {
@@ -99,7 +112,7 @@ body {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin: 9rem 2rem;
+  margin: 10rem 2rem;
   align-items: center;
   justify-content: space-around;
   backdrop-filter: blur(0.1rem);
@@ -127,7 +140,7 @@ body {
   opacity: 0.8;
 }
 
-.btnOfficialStore {
+.btnOfficialSite {
   font-family: "Poppins", sans-serif;
   box-shadow: 0.1rem 0.1rem 0.1rem var(--red2);
   background: none;
@@ -139,11 +152,11 @@ body {
   transition: all 0.5s;
 }
 
-.btnOfficialStore > a {
+.btnOfficialSite > a {
   color: var(--red2);
 }
 
-.btnOfficialStore:hover {
+.btnOfficialSite:hover {
   background-color: var(--red3);
   background-color: var(--black);
   box-shadow: 0 0.1rem 0.1rem var(--red2);
@@ -364,7 +377,7 @@ figcaption > h4 {
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.1rem;
   color: var(--);
-  font-size: 2.5rem;
+  font-size: 2.4rem;
   text-shadow: 0 1px var(--black);
   margin-bottom: 1rem;
 }
@@ -428,6 +441,10 @@ footer {
   filter: invert(100%);
 }
 
+.socialMedia > a > i {
+  transform: scale(1.1);
+}
+
 .socialMedia > a > i:hover {
   transform: scale(1.3);
   transition: all 0.5s;
@@ -442,19 +459,35 @@ hr {
   background-image: linear-gradient(to right, #000, rgba(255, 0, 0, 0.8), #000);
 }
 
-@media (max-width: 768px) {
-  .navegation {
-    justify-content: space-around;
-  }
+.topBtn {
+  background: none;
+  position: fixed;
+  border: none;
+  overflow: hidden;
+  right: 1.25rem;
+  bottom: 1.75rem;
+  width: 1.5rem;
+  cursor: pointer;
+  z-index: 7;
+}
 
-  .headerLogo > a > img {
-    margin: 2rem 0;
-    width: 2.2rem;
-  }
+.by {
+  display: flex;
+  font-size: 0.5rem;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.25rem;
+  color: #555555;
+  justify-content: center;
+  padding: 0.75rem 0;
+}
 
+@media (max-width: 880px) {
   .mobileToggle {
     display: block;
+    position: relative;
     cursor: pointer;
+    margin-top: 7rem;
+    left: 5.7rem;
     z-index: 2;
     border: none;
     border-top: 0.125rem solid var(--red1);
@@ -473,11 +506,13 @@ hr {
   }
 
   .mobileToggle.active {
+    margin-left: 16.75rem;
     border-top: transparent;
+    position: fixed;
   }
 
   .mobileToggle.active::before {
-    transform: rotate(50deg);
+    transform: rotate(49deg);
   }
 
   .mobileToggle.active::after {
@@ -498,13 +533,16 @@ hr {
     width: 100vw;
     height: 100%;
     top: 0;
+    left: 0;
     overflow: hidden;
     background: var(--black);
     z-index: 1;
+    background: none;
+    backdrop-filter: blur(5rem);
   }
 
   .navMenu ul {
-    margin: 6rem 2rem;
+    margin: 7.75rem 2rem;
   }
 
   .navMenu li {
@@ -518,6 +556,17 @@ hr {
     transform: scale(1);
   }
 
+  .locales {
+    position: relative;
+    gap: 1rem;
+    top: -1rem;
+  }
+
+  .locales img {
+    width: 2.2rem;
+    height: auto;
+  }
+
   .background {
     height: auto;
   }
@@ -525,7 +574,7 @@ hr {
   .heroClub {
     display: flex;
     flex-direction: column;
-    margin: 5rem 2rem;
+    margin: 2rem;
     border-radius: 3rem;
   }
 
@@ -538,7 +587,7 @@ hr {
     margin: auto;
   }
 
-  .btnOfficialStore {
+  .btnOfficialSite {
     margin-bottom: 2.5rem;
     margin: 2rem 0;
   }
@@ -625,6 +674,12 @@ hr {
 }
 
 @media (max-width: 550px) {
+  .clubLogos > img {
+    margin: 7rem 0.5rem;
+    width: 3.5rem;
+    height: auto;
+  }
+
   .clubsMatch {
     display: none;
   }
@@ -653,34 +708,32 @@ hr {
   }
 
   .iconsFooter > a > img {
-    transform: scale(1.2);
-    margin: 0 1rem;
+    transform: scale(1.1);
+    margin: 1rem 1rem;
   }
 
   .socialMedia {
-    transform: scale(2.1);
+    transform: scale(1.75);
     margin: 2rem 0;
   }
 
   .headTitles > h2 {
     margin-bottom: 3rem;
   }
+
+  .mobileToggle.active {
+    margin-left: -3.75rem;
+  }
 }
 
-@media (min-width: 769px) and (max-width: 1108px) {
-  .headerLogo > a > img {
-    width: 2rem;
-    margin: 2.2rem 1.3rem;
-  }
-
+@media (min-width: 881px) and (max-width: 1108px) {
   .navMenu > ul {
     display: flex;
     flex-direction: row;
   }
 
   .navMenu li {
-    padding: 1rem;
-    margin: 1.1rem;
+    margin: 0.5rem;
     padding: 0.7rem;
   }
 

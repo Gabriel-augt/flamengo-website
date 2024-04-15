@@ -5,124 +5,134 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="js/script.js" defer></script>
+    <script src="translations/pt-BR.js" defer></script>
+    <script src="translations/es.js" defer></script>
+    <script src="translations/en.js" defer></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="shortcut icon" href="assets/flamengoLogo.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/flamengoLogo.svg" type="image/x-icon" />
     <title>Flamengo</title>
 </head>
 
 <body>
     <div class="background">
-        <header>
+        <header id="home">
             <nav class="navegation">
-                <div class="headerLogo">
-                    <a href="#"><img src="assets/flamengoLogo.svg" alt="Flamengo Logo Home"></a>
-                </div>
 
                 <div class="navMenu">
-                    <ul>
-                        <li>Home</li>
-                        <li>Matches</li>
-                        <li>Important Titles</li>
-                        <li>About</li>
+
+                    <ul data-aos="fade-down" data-aos-duration="400">
+                        <a href="#home"> <li class="itemList home">Home</li></a>
+                        <a href="#matches"> <li class="itemList matches">Matches</li></a>
+                        <a href="#important titles"> <li class="itemList importantTitle">Important Titles</li></a>
+                        <a href="#about" > <li class="itemList about">About</li></a>
                     </ul>
 
                 </div>
                 
-                <button class="mobileToggle"></button>                
-                
+                <button class="mobileToggle"></button>
+
+                <div class="locales">
+                    <img class="en" title="English" src="assets/euaUnitedkingdom.png">
+                    <img class="ptBr" title="Português" src="assets/brazil.png">
+                    <img class="es" title="Español" src="assets/spain.png">
+                </div>
             </nav>
+
+
         </header>
 
         <main class="heroClub">
-            <section class="heroSubtitle">
+            <section class="heroSubtitle" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
                 <h1 class="leftHero">Once Flamengo <br> I will always be Flamengo</h1>
 
                 <nav>
-                    <button class="btnOfficialStore">
-                        <a href="http://www.flamengo.com.br/" target="_blank">Official Site</a>
+                    <button class="btnOfficialSite">
+                        <a class="siteLink" href="http://www.flamengo.com.br/" target="_blank">Official Site</a>
                     </button>
                 </nav>
 
             </section>
 
-            <section class="logosContainer">
+            <section class="logosContainer" data-aos="fade-up" data-aos-duration="800" data-aos-delay="550">
 
                 <div class="clubLogos">
-                    <img src="assets/flamengoLogo.svg" alt="Flamengo Logo" />
-                    <img src="assets/crf.png" alt="CRF Logo" />
-                    <img src="assets/rowing.png" alt="Rowing Logo" />
+                    <img src="assets/flamengoLogo.svg"/>
+                    <img src="assets/crf.png"/>
+                    <img src="assets/rowing.png"/>
                 </div>
 
             </section>
         </main>
     </div>
 
-    <section class="backgroundMatch">
+    <section class="backgroundMatch" id="matches">
 
-        <div class="match">
+        <div class="match" data-aos="fade-right" data-aos-duration="700">
             <div class="matchText">
-                <h2>Next match</h2>
-                <p>Brazilian championship 2023</p>
+                <h2 class="nextMatch">Next match</h2>
+                <p class="brLeague">Brazilian championship 2023</p>
             </div>
 
             <h3>Flamengo X Fortaleza</h3>
             <div class="logosNextMatch">
-                <img src="assets/flamengoLogo.svg" alt="Flamengo Logo">
+                <img src="assets/flamengoLogo.svg">
                 <p>X</p>
-                <img src="assets/fortalezaLogo.svg" alt="Fortaleza Logo">
+                <img src="assets/fortalezaLogo.svg">
             </div>
 
             <div class="dateMatch">
                 <span>Maracanã</span>
-                <span>11/29/2023 - 19:30</span>
+                <span class="timeMainMatch">11/29/2023 - 19:30</span>
             </div>
         </div>
 
-        <div class="futureMatches">
-            <h2>Future matches</h2>
+        <div class="futureMatches" data-aos="fade-left" data-aos-duration="700">
+            <h2 class="futureMatch">Future matches</h2>
 
             <div class="flaXcuiaba">
                 <p class="clubsMatch">Flamengo</p>
-                <img src="assets/flamengoLogo.svg" alt="Flamengo Logo">
+                <img src="assets/flamengoLogo.svg">
                 <p>X</p>
-                <img src="assets/cuiabaLogo.svg" alt="Cuiabá Logo">
+                <img src="assets/cuiabaLogo.svg">
                 <p class="clubsMatch">Cuiabá</p>
-                <p class="dateHover">12/03/2023 - 16:00</p>
+                <p class="dateHover date1">12/03/2023 - 16:00</p>
             </div>
 
             <div class="spXfla">
                 <p class="clubsMatch">São Paulo</p>
-                <img src="assets/saoPauloLogo.svg" alt="São Paulo Logo">
+                <img src="assets/saoPauloLogo.svg">
                 <p>X</p>
-                <img src="assets/flamengoLogo.svg" alt="Flamengo Logo">
+                <img src="assets/flamengoLogo.svg">
                 <p class="clubsMatch">Flamengo</p>
-                <p class="dateHover">12/06/2023 - 21:30</p>
+                <p class="dateHover date2">12/06/2023 - 21:30</p>
             </div>
 
             <div class="flaXgremio">
                 <p class="clubsMatch">Flamengo</p>
-                <img src="assets/flamengoLogo.svg" alt="flamengo Logo">
+                <img src="assets/flamengoLogo.svg">
                 <p>X</p>
-                <img src="assets/gremioLogo.svg" alt="Grêmio Logo">
+                <img src="assets/gremioLogo.svg">
                 <p class="clubsMatch">Grêmio</p>
                 <p class="dateHover">12/12/2023 - 21:30</p>
             </div>
 
     </section>
 
-    <section class="backgroundMatch bgColumn">
+    <section class="backgroundMatch bgColumn" id="important titles">
         
         <header class="headTitles">
-            <h2>Most important titles</h2>
+            <h2 class="impTitles">Most important titles</h2>
         </header>
 
         <div class="titlesImportant">
-            <figure class="cards">
+            <figure class="cards" data-aos="fade-up" data-aos-duration="700">
 
-                <img src="assets/mundial1981.png" alt="Mundial 1981">
+                <img src="assets/mundial1981.png">
                 
                 <figcaption>
                     <h4>Intercontinental Cup 1981</h4>
@@ -130,9 +140,9 @@
 
             </figure>
 
-            <figure class="cards">
+            <figure class="cards" data-aos="fade-up" data-aos-duration="700">
 
-                <img src="assets/libertadores1981.png" alt="Libertadores 1981">
+                <img src="assets/libertadores1981.png">
 
                 <figcaption>
                     <h4>Copa Libertadores 1981</h4>
@@ -140,9 +150,9 @@
 
             </figure>
 
-            <figure class="cards">
+            <figure class="cards" data-aos="fade-up" data-aos-duration="700">
 
-                <img src="assets/libertadores2019.png" alt="Libertadores 2019">
+                <img src="assets/libertadores2019.png">
 
                 <figcaption>
                     <h4>Copa Libertadores 2019</h4>
@@ -150,9 +160,9 @@
 
             </figure>
 
-            <figure class="cards">
+            <figure class="cards" data-aos="fade-up" data-aos-duration="700">
 
-                <img src="assets/libertadores2022.png" alt="Libertadores 2022">
+                <img src="assets/libertadores2022.png">
                 <figcaption>
                     <h4>Copa Libertadores 2022</h4>
                 </figcaption>
@@ -161,14 +171,13 @@
         </div>
     </section>
 
-    <section class="backgroundMatch about">
+    <section class="backgroundMatch about" id="about">
         
-        <section class="aboutInfo">
+        <section class="aboutInfo" data-aos="fade-right" data-aos-duration="700">
             <h1 class="clubName">Clube de Regatas do Flamengo</h1>
 
             <p class="clubInfos">The Clube de Regatas do Flamengo more commonly referred to as simply Flamengo, and
-                popularly by the
-                nicknames Fla, Mengo and Mengão is a Brazilian sports club based in Rio de Janeiro, in the
+                popularly by the nicknames Fla, Mengo and Mengão is a Brazilian sports club based in Rio de Janeiro, in the
                 neighborhood of Gávea.</p>
 
             <p class="since">Since - November 15, 1895.</p>
@@ -178,17 +187,17 @@
         <section class="imgsAbout">
             <div class="fundationImgs">
 
-                <figure>
-                    <img src="assets/foundation1895.png" alt="Foundation 1895">
+                <figure data-aos="fade-left" data-aos-duration="700">
+                    <img src="assets/foundation1895.png">
                 </figure>
 
-                <figure>
-                    <img src="assets/2foundation1895.png" alt="Foundation 1895">
+                <figure data-aos="fade-left" data-aos-duration="700">
+                    <img src="assets/2foundation1895.png">
                 </figure>
             </div>
 
-            <figure>
-                <img id="firstTeamImg" src="assets/firstTeam.png" alt="First Team">
+            <figure data-aos="fade-left" data-aos-duration="700">
+                <img id="firstTeamImg" src="assets/firstTeam.png">
             </figure>
 
         </section>
@@ -202,23 +211,23 @@
             <p>Flamengo |</p>
 
             <nav class="iconsFooter">
-                <a id="links" href="https://www.flamengo.com.br/" target="_blank" alt="New tab on the Flamengo website"> <img src="assets/flamengoLogo.svg"> </a>
+                <a id="links" href="https://www.flamengo.com.br" target="_blank"> <img src="assets/flamengoLogo.svg"> </a>
 
-                <a id="links" href="https://www.adidas.com.br/flamengo" target="_blank" alt="New tab on the Adidas website"> <img src="assets/adidasLogo.svg"> </a>
+                <a id="links" href="https://www.adidas.com.br/flamengo" target="_blank"> <img src="assets/adidasLogo.svg"> </a>
             </nav>
 
         </div>
 
         <nav class="socialMedia">
-            <a href="https://pt-br.facebook.com/FlamengoOficial/" target="_blank" title="Facebook">
+            <a href="https://pt-br.facebook.com/FlamengoOficial" target="_blank" title="Facebook">
                 <i class="fa-brands fa-facebook-f" style="color: #d91818;"></i>
             </a>
 
-            <a href="https://twitter.com/flamengo_en" target="_blank" title="Twitter">
+            <a href="https://twitter.com/Flamengo" target="_blank" title="Twitter">
                 <i class="fa-brands fa-x-twitter" style="color: #d91818;"></i>
             </a>
 
-            <a href="https://www.instagram.com/flamengoen/" target="_blank" title="Instagram">
+            <a href="https://www.instagram.com/flamengo" target="_blank" title="Instagram">
                 <i class="fa-brands fa-instagram" style="color: #d91818;"></i>
             </a>
 
@@ -231,7 +240,13 @@
             </a>
         </nav>
 
+        
     </footer>
+    <span class="by">by: Gabriel Augusto </span>
+
+    <a href="#home">
+        <button class="topBtn" data-aos="fade-left" data-aos-duration="500"><img src="assets/arrowUp.svg"</button>
+    </a>
 </body>
 
 </html>
