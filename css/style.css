@@ -471,14 +471,9 @@ hr {
   z-index: 7;
 }
 
-.by {
+.credits {
   display: flex;
-  font-size: 0.5rem;
-  font-family: "Poppins", sans-serif;
-  letter-spacing: 0.25rem;
-  color: #555555;
   justify-content: center;
-  padding: 0.75rem 0;
 }
 
 @media (max-width: 880px) {
