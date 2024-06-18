@@ -334,7 +334,7 @@ body {
   align-items: center;
   text-align: center;
   justify-content: center;
-  margin: 1rem;
+  margin: 1rem 0;
   font-size: 1.4rem;
 }
 
@@ -469,6 +469,7 @@ hr {
   width: 1.5rem;
   cursor: pointer;
   z-index: 7;
+  display: none;
 }
 
 .credits {
@@ -532,8 +533,7 @@ hr {
     overflow: hidden;
     background: var(--black);
     z-index: 1;
-    background: none;
-    backdrop-filter: blur(5rem);
+    background-color: var(--black);
   }
 
   .navMenu ul {
@@ -675,6 +675,12 @@ hr {
     height: auto;
   }
 
+  .match,
+  .futureMatches {
+    width: 100%;
+    margin: 2rem 0;
+  }
+
   .clubsMatch {
     display: none;
   }
@@ -719,6 +725,10 @@ hr {
   .mobileToggle.active {
     margin-left: -3.75rem;
   }
+
+  .credits img {
+    width: 100%;
+  }
 }
 
 @media (min-width: 881px) and (max-width: 1108px) {
@@ -738,6 +748,15 @@ hr {
 
   .leftHero {
     font-size: 2.2rem;
+  }
+
+  .clubLogos > img {
+    width: 4rem;
+    height: auto;
+  }
+
+  #matches {
+    margin: 12rem 0;
   }
 
   .flaXcuiaba,
@@ -761,6 +780,10 @@ hr {
     flex-direction: column;
   }
 
+  .headTitles > h2 {
+    margin-bottom: 2rem;
+  }
+
   .bgColumn {
     justify-content: initial;
   }
@@ -774,5 +797,9 @@ hr {
 
   .aboutInfo {
     box-shadow: none;
+  }
+
+  .socialMedia {
+    transform: scale(1.5);
   }
 }
