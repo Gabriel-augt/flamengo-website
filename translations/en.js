@@ -5,8 +5,9 @@ function en() {
     const menuAbout = document.querySelector(".about");
   
     const hero = document.querySelector(".leftHero");
-    const siteBtn = document.querySelector (".siteLink");
-  
+    const siteBtn = document.querySelector(".siteLink");
+
+    const stadium = document.querySelector(".stadium");
     const nextMatch = document.querySelector(".nextMatch");
     const brLeague = document.querySelector(".brLeague");
     const futureMatch = document.querySelector(".futureMatch");
@@ -29,9 +30,10 @@ function en() {
         menuImportantTitle.textContent = "Important Titles";
         menuAbout.textContent = "About";
   
-        hero.innerHTML = "Once Flamengo <br> I will always be Flamengo";
+        hero.innerHTML = "Once Flamengo, <br> always Flamengo!";
         siteBtn.textContent = "Official Site";
-  
+
+        stadium.textContent = "Maracana Stadium";
         nextMatch.textContent = "Next match";
         brLeague.textContent = "Brazilian championship 2023";
         futureMatch.textContent = "Future matches";

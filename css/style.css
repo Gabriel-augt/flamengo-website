@@ -469,7 +469,6 @@ hr {
   width: 1.5rem;
   cursor: pointer;
   z-index: 7;
-  display: none;
 }
 
 .credits {
@@ -610,6 +609,7 @@ hr {
   .headTitles > h2 {
     font-size: 1.3rem;
     margin-bottom: 3rem;
+    letter-spacing: 0;
   }
 
   .futureMatches {
